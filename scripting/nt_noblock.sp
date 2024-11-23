@@ -8,7 +8,7 @@ public Plugin myinfo = {
 	name = "NT NoBlock",
 	description = "Noblock for NT, requires SM >= 1.11.6939 probably",
 	author = "bauxite, credits to sslice's NoBlock",
-	version = "0.1.0",
+	version = "0.1.1",
 	url = "https://forums.alliedmods.net/showthread.php?t=53721"
 };
 
@@ -37,5 +37,5 @@ void NoBlockClient(int userid)
 	}
 	
 	SetEntityCollisionGroup(client, 2);
-	EntityCollisionRulesChanged(client);
+	// EntityCollisionRulesChanged(client); don't need to do this as it's called by SetEntityCollisionGroup().
 }
